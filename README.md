@@ -32,8 +32,6 @@ O projeto utiliza a fonte [Poppins](https://fonts.google.com/specimen/Poppins) d
 - Validação para limitar o número de acompanhantes a 5
 - Animações para melhorar a experiência do usuário
 
-## 📸 Capturas de Tela
-
 ![Formulário de Confirmação](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
 
 ## 📝 Como Usar
