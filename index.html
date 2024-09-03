@@ -18,18 +18,33 @@
       <h1>Você está convidado para o meu aniversário!</h1>
 
       <div class="form-wrapper">
-        <form id="form1">
+        <div id="info-card" class="info-card">
+          <p>🎉 Você está Convidado 🎉</p>
+          <p>Data: 07/09/2024</p>
+          <p>Local: Rua Jequirana de Goiás, 515</p>
+          <p>Horário: 15h</p>
+          <p>*traga sua bebida</p>
+          <p>Por favor, confirme sua presença abaixo :)</p>
+          <button id="confirm-button" class="btn-confirmar">Confirmar</button>
+        </div>
+
+        <form id="form1" class="hidden">
           <div class="input-block">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" required />
           </div>
-          <button type="submit" class="btn-login">Clique aqui</button>
+          <button type="submit" class="btn-clique-aqui">Clique aqui</button>
         </form>
 
         <form id="form2" class="hidden">
           <div class="input-block">
             <label for="accompany">Deseja levar acompanhante?</label>
-            <input type="checkbox" id="accompany" name="accompany" />
+            <div>
+              <input type="checkbox" id="checkSim" name="accompany" />
+              <p>Sim</p>
+              <input type="checkbox" id="checkNao" name="accompany" />
+              <p>Não</p>
+            </div>
           </div>
           <div class="input-block hidden" id="accompany-number-block">
             <label for="accompany-number">Número de acompanhantes</label>
@@ -41,7 +56,7 @@
             />
           </div>
           <p id="error-message" class="hidden">Limite de 5 Acompanhantes</p>
-          <button type="submit" class="btn-login">Enviar</button>
+          <button type="submit" class="btn-enviar">Enviar</button>
         </form>
       </div>
     </section>
