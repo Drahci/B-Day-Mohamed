@@ -1,3 +1,12 @@
+:root {
+  --btn-bg-color: #7159c1;
+  --btn-color: white;
+  --btn-border-radius: 25px;
+  --btn-padding: 7px;
+  --btn-font-family: "Poppins", sans-serif;
+  --btn-font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -11,7 +20,7 @@ body {
 
 body {
   background-color: #7159c1;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--btn-font-family);
   font-weight: 500;
   font-style: normal;
 }
@@ -59,22 +68,33 @@ form .input-block input {
   outline-color: #7159c1;
 }
 
-form .btn-login {
+form .input-block div {
+  display: flex;
+  align-items: center;
+}
+
+form .input-block div p {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  color: darkslateblue;
+}
+
+.btn-clique-aqui,
+.btn-enviar,
+.btn-confirmar {
   display: block;
   min-width: 120px;
   border: none;
-  background-color: #7159c1;
-  color: white;
-  border-radius: 25px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+  border-radius: var(--btn-border-radius);
   margin: auto;
-  padding: 7px;
-
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+  padding: var(--btn-padding);
+  font-family: var(--btn-font-family);
+  font-weight: var(--btn-font-weight);
 }
 
-/* APARIÇÃO DO FORM */
 form {
   overflow: hidden;
   animation: fade 0.2s;
@@ -90,7 +110,9 @@ form .input-block:nth-child(2) {
   animation-fill-mode: backwards;
 }
 
-form .btn-login {
+.btn-clique-aqui,
+.btn-enviar,
+.btn-confirmar {
   animation: move 400ms;
   animation-delay: 250ms;
   animation-fill-mode: backwards;
@@ -121,13 +143,11 @@ form .btn-login {
 .hidden {
   display: none;
 }
-/* Quando clicar no botão, sumir com o form */
 .form-hide {
   animation: down 1.2s forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-/* Remover setas dos campos de número no Chrome, Safari e Edge */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -143,27 +163,6 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-/* FORM NO-NO CASO CHAME MAIS DE 5 PESSOAS */
-
-form.validate-error {
-  animation: nono 200ms linear, fade paused;
-  animation-iteration-count: 2;
-}
-
-@keyframes nono {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  35% {
-    transform: translateX(-15%);
-  }
-  70% {
-    transform: translateX(15%);
-  }
-}
-
-/* squares */
 body {
   overflow: hidden;
 }
@@ -196,4 +195,17 @@ body {
   font-size: 14px;
   margin-top: -18px;
   margin-bottom: 5px;
+}
+
+.info-card {
+  background-color: white;
+  padding: 23px 20px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.info-card p {
+  color: black;
+  margin: 10px;
+  text-align: justify;
 }
