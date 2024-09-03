@@ -3,6 +3,8 @@ const form1 = document.querySelector("#form1");
 const form2 = document.querySelector("#form2");
 const accompanyCheckbox = document.querySelector("#accompany");
 const accompanyNumberBlock = document.querySelector("#accompany-number-block");
+const accompanyNumberInput = document.querySelector("#accompany-number");
+const errorMessage = document.querySelector("#error-message");
 
 btnLogin.addEventListener("click", (event) => {
   event.preventDefault();
@@ -30,6 +32,7 @@ form1.addEventListener("animationend", (event) => {
   if (event.animationName === "down") {
     form1.style.display = "none";
     form2.classList.remove("hidden");
+    form2.style.animation = "fade 0.5s"; // Ajuste para aparecer mais rápido
   }
 });
 
@@ -38,12 +41,26 @@ accompanyCheckbox.addEventListener("change", (event) => {
     accompanyNumberBlock.classList.remove("hidden");
   } else {
     accompanyNumberBlock.classList.add("hidden");
+    errorMessage.classList.add("hidden");
   }
 });
 
 form2.addEventListener("submit", (event) => {
   event.preventDefault();
-  alert("Formulário enviado com sucesso!");
+  const accompanyNumber = parseInt(accompanyNumberInput.value, 10);
+
+  if (accompanyNumber > 5) {
+    form2.classList.add("validate-error");
+    errorMessage.classList.remove("hidden");
+    form2.addEventListener("animationend", (event) => {
+      if (event.animationName === "nono") {
+        form2.classList.remove("validate-error");
+      }
+    });
+  } else {
+    errorMessage.classList.add("hidden");
+    alert("Formulário enviado com sucesso!");
+  }
 });
 
 /* background squares */

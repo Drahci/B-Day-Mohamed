@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Convite</title>
-    <link rel="stylesheet" href="/App/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="form-section">
@@ -14,7 +20,7 @@
       <div class="form-wrapper">
         <form id="form1">
           <div class="input-block">
-            <label for="name">Nome:</label>
+            <label for="name">Nome</label>
             <input type="text" id="name" name="name" required />
           </div>
           <button type="submit" class="btn-login">Clique aqui</button>
@@ -26,7 +32,7 @@
             <input type="checkbox" id="accompany" name="accompany" />
           </div>
           <div class="input-block hidden" id="accompany-number-block">
-            <label for="accompany-number">Número de acompanhantes:</label>
+            <label for="accompany-number">Número de acompanhantes</label>
             <input
               type="number"
               id="accompany-number"
@@ -34,6 +40,7 @@
               min="1"
             />
           </div>
+          <p id="error-message" class="hidden">Limite de 5 Acompanhantes</p>
           <button type="submit" class="btn-login">Enviar</button>
         </form>
       </div>
@@ -41,6 +48,6 @@
 
     <ul class="squares"></ul>
 
-    <script src="/App/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
