@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 15.5px;
-  padding: 9.2px;
+  margin: 0px;
+  padding: 10px;
 }
 
 html,
@@ -11,7 +11,9 @@ body {
 
 body {
   background-color: #7159c1;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 section {
@@ -40,6 +42,7 @@ form .input-block {
 }
 
 form .input-block label {
+  margin: -9px;
   font-size: 14px;
   color: darkslateblue;
 }
@@ -65,6 +68,10 @@ form .btn-login {
   border-radius: 25px;
   margin: auto;
   padding: 7px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* APARIÇÃO DO FORM */
@@ -118,6 +125,13 @@ form .btn-login {
 .form-hide {
   animation: down 1.2s forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Remover setas dos campos de número no Chrome, Safari e Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @keyframes down {
@@ -175,4 +189,11 @@ body {
   to {
     transform: translateY(-800px) rotate(960deg);
   }
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -18px;
+  margin-bottom: 5px;
 }
