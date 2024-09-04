@@ -58,7 +58,7 @@ form .input-block label {
 
 form .input-block input {
   width: 100%;
-  display: block;
+  display: flex;
   margin-top: 8px;
   padding: 7px;
   font-size: 16px;
