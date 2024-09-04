@@ -5,7 +5,6 @@ import {
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
 
-// Configuração do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyAyYXn_vHENH2YvAAfdOeVBxrFCuKMHIxI",
   authDomain: "my-bday-20af1.firebaseapp.com",
@@ -15,7 +14,6 @@ const firebaseConfig = {
   appId: "1:746681276979:web:5775142d6aee56fdb56146",
 };
 
-// Inicializa o Firebase e Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -110,7 +108,7 @@ form2.addEventListener("submit", async (event) => {
 
       console.log("Dados enviados com sucesso:", docRef.id);
       alert("Conto com a sua presença!");
-      window.location.reload(); // Corrigido para recarregar a página
+      window.location.reload();
     } catch (error) {
       console.error("Erro ao enviar os dados:", error);
       alert("Houve um erro ao enviar os dados. Por favor, tente novamente.");
@@ -118,7 +116,6 @@ form2.addEventListener("submit", async (event) => {
   }
 });
 
-/* background squares */
 const ulSquares = document.querySelector("ul.squares");
 
 for (let i = 0; i < 11; i++) {

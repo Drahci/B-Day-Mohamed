@@ -15,22 +15,18 @@
 
 input[type="checkbox"] {
   -webkit-appearance: none;
-  /* Remove default styling on iOS */
   appearance: none;
   width: 20px;
-  /* Adjust the width to fit properly */
   height: 20px;
-  /* Adjust the height to fit properly */
   border: 1px solid #7159c1;
   border-radius: 4px;
   position: relative;
   margin-right: 10px;
-  /* Add margin if needed */
   vertical-align: middle;
 }
 
 input[type="checkbox"]:checked::before {
-  content: '✓';
+  content: "✓";
   display: block;
   text-align: center;
   line-height: 18px;
@@ -40,9 +36,9 @@ input[type="checkbox"]:checked::before {
 
 html,
 body {
-    height: 100vh;
-      overflow-x: hidden;
-      overflow-y: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -96,7 +92,6 @@ form .input-block input {
 
 .input-check {
   display: flex;
- 
 }
 
 form .input-block div {
