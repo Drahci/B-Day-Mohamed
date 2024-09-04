@@ -9,13 +9,14 @@
 
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+
 }
 
 html,
 body {
-    min-height: 100vh;
+  height: 100vh;
 }
 
 body {
@@ -23,8 +24,6 @@ body {
   font-family: var(--btn-font-family);
   font-weight: 500;
   font-style: normal;
-    overflow-x: hidden;
-      overflow-y: auto;
 }
 
 section {
@@ -32,9 +31,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  max-width: 100%;
 }
 
 h1 {
@@ -45,12 +41,10 @@ h1 {
 }
 
 form {
-  max-width: 100%;
   margin: 20px 0;
   background-color: white;
-  padding: 20px;
+  padding: 30px 25px;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 form .input-block {
@@ -65,6 +59,7 @@ form .input-block label {
 
 form .input-block input {
   width: 100%;
+  display: block;
   margin-top: 8px;
   padding: 7px;
   font-size: 16px;
@@ -122,9 +117,6 @@ form .input-block:nth-child(2) {
   animation: move 400ms;
   animation-delay: 250ms;
   animation-fill-mode: backwards;
-    min-width: 100px;
-      padding: 8px;
-      font-size: 14px;
 }
 
 @keyframes move {
@@ -132,6 +124,7 @@ form .input-block:nth-child(2) {
     opacity: 0;
     transform: translateX(-35%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0%);
@@ -143,6 +136,7 @@ form .input-block:nth-child(2) {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -152,6 +146,7 @@ form .input-block:nth-child(2) {
 .hidden {
   display: none;
 }
+
 .form-hide {
   animation: down 1.2s forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -167,14 +162,16 @@ input[type="number"]::-webkit-inner-spin-button {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(100vh);
   }
 }
 
 body {
-  overflow: auto;
+  overflow: hidden;
 }
+
 .squares li {
   width: 40px;
   height: 40px;
@@ -191,9 +188,11 @@ body {
     opacity: 0;
     transform: translateY(0);
   }
+
   50% {
     opacity: 1;
   }
+
   to {
     transform: translateY(-800px) rotate(960deg);
   }
@@ -211,42 +210,10 @@ body {
   padding: 23px 20px;
   border-radius: 5px;
   margin: 10px;
-
-    max-width: 100%;
-      margin: 10px;
-    
 }
 
 .info-card p {
   color: black;
   margin: 10px;
   text-align: justify;
-}
-
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-
-  form {
-    padding: 20px;
-  }
-
-  .btn-clique-aqui,
-  .btn-enviar,
-  .btn-confirmar {
-    min-width: 100px;
-    padding: 5px;
-  }
-
-  .input-block label {
-    font-size: 12px;
-  }
-
-  .input-block input {
-    font-size: 14px;
-      padding: 10px;
-  }
 }
